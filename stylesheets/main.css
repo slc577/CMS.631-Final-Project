@@ -1,19 +1,19 @@
 /*
-$color1: rgba(85, 91, 110, 1); gray
-$color2: rgba(229, 99, 153, 1); pink
-$color3: rgba(242, 239, 234, 1); whiteish
-$color4: rgba(129, 214, 227, 1); blue
-$color5: rgba(122, 229, 130, 1); green
+$color1: rgba(85, 91, 110, 1); #555B6E gray
+$color2: rgba(229, 99, 153, 1); #E56399 pink
+$color3: rgba(242, 239, 234, 1); #F2EFEA whiteish
+$color4: rgba(129, 214, 227, 1); #81D6E3 blue
+$color5: rgba(122, 229, 130, 1); #7AE582 green
 */
 
 body {
-	background-color: rgba(242, 239, 234, 1);;
-	color: rgba(85, 91, 110, 1);
+	background-color: #2b2b2b;
+	color: #555B6E;
 	font-family: 'Quicksand', sans-serif;
 }
 
 #main {
-	background-color: rgba(230, 230, 230, 1);
+	background-color: #F2EFEA;
 	width: 400px;
 	min-height: 600px;
 	max-width: 80vw;
@@ -32,4 +32,81 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	background: #aaa;
+}
+
+.btn {
+	border-radius: 6px;
+	border: 0;
+	padding: 10px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	background-color: #E56399;
+	color: #2b2b2b;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.btn:disabled {
+	background-color: #aaa;
+}
+
+.btn:hover:disabled {
+	background-color: #aaa;
+}
+
+.btn-full {
+	width: 100%;
+}
+
+.btn:hover {
+	color: white;
+	background-color: #e08bae;
+	cursor: pointer;
+}
+
+.activity-btn {
+	background-color: rgba(0,0,0,0);
+	border: 2px solid #555B6E;
+	padding: 8px;
+}
+
+.activity-btn:hover, .activity-btn.pickedActivity:hover {
+	background-color: #9ba2b7;
+}
+
+.activity-btn.pickedActivity {
+	background-color: #555B6E;
+	color: white;
+}
+
+.questions-table {
+	border-collapse: collapse;
+}
+
+.questions-table thead tr {
+	background-color: #555B6E;
+	color: white;
+}
+
+.questions-table thead tr:hover {
+	background-color: #555B6E;	
+}
+
+.questions-table tr {
+	background-color: rgba(0,0,0,0);
+	border: 2px solid #555B6E;
+}
+
+.questions-table tr:hover, .questions-table tr.pickedTransport:hover {
+	background-color: #9ba2b7;
+}
+
+.questions-table tr td {
+	width: 100px;
+	padding: 10px;
+}
+
+.questions-table tr.pickedTransport {
+	background-color: #555B6E;
+	color: white;
 }

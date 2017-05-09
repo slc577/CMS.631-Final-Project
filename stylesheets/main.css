@@ -1,0 +1,35 @@
+/*
+$color1: rgba(85, 91, 110, 1); gray
+$color2: rgba(229, 99, 153, 1); pink
+$color3: rgba(242, 239, 234, 1); whiteish
+$color4: rgba(129, 214, 227, 1); blue
+$color5: rgba(122, 229, 130, 1); green
+*/
+
+body {
+	background-color: rgba(242, 239, 234, 1);;
+	color: rgba(85, 91, 110, 1);
+	font-family: 'Quicksand', sans-serif;
+}
+
+#main {
+	background-color: rgba(230, 230, 230, 1);
+	width: 400px;
+	min-height: 600px;
+	max-width: 80vw;
+	max-height: 80vh;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding: 15px;
+	overflow: auto;
+}
+
+::-webkit-scrollbar { 
+	width: 3px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #aaa;
+}

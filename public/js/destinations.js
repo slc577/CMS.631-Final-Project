@@ -72,7 +72,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Eating Lunch at Bartley's in Harvard Sqaure",
+		"name": "Eating Lunch at Bartley's in Harvard Square",
 		"id": "bartley",
 		"walkTransport": {
 			"time": 35,

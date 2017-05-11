@@ -39,7 +39,7 @@ var DESTINATIONS = [
 		"publicTransport": {
 			"time": 20,
 			"money": 0,
-			"carbon": 5.04
+			"carbon": 0.81
 		},
 		"carTransport": {
 			"time": 8,

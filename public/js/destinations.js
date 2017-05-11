@@ -24,7 +24,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Visit to Cambridgeside Galleria",
+		"name": "Visiting Cambridgeside Galleria",
 		"id": "cambridgeside",
 		"walkTransport": {
 			"time": 28,

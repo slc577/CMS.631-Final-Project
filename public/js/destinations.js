@@ -120,6 +120,83 @@ var DESTINATIONS = [
 		}
 	},
 
+	{
+		"name": "Visiting the Museum of Science",
+		"id": "museumofscience",
+		"walkTransport": {
+			"time": 36,
+			"money": 0,
+			"carbon": 0
+		},
+		"bikeTransport": {
+			"time": 12,
+			"money": 6,
+			"carbon": 0
+		},
+		"publicTransport": {
+			"time": 25,
+			"money": 0,
+			"carbon": 0.855
+		},
+		"carTransport": {
+			"time": 9,
+			"money": 7.99,
+			"carbon": 1.824
+		}
+	},
+
+	{
+		"name": "Visiting the Boston Aquarium",
+		"id": "aquarium",
+		"walkTransport": {
+			"time": 52,
+			"money": 0,
+			"carbon": 0
+		},
+		"bikeTransport": {
+			"time": 20,
+			"money": 6,
+			"carbon": 0
+		},
+		"publicTransport": {
+			"time": 31,
+			"money": 2.25,
+			"carbon": 1.17
+		},
+		"carTransport": {
+			"time": 18,
+			"money": 10.31,
+			"carbon": 2.496
+		}
+	},
+
+	{
+		"name": "Visiting the Museum of Fine Arts",
+		"id": "finearts",
+		"walkTransport": {
+			"time": 36,
+			"money": 0,
+			"carbon": 0
+		},
+		"bikeTransport": {
+			"time": 12,
+			"money": 6,
+			"carbon": 0
+		},
+		"publicTransport": {
+			"time": 25,
+			"money": 1.70,
+			"carbon": 0.81
+		},
+		"carTransport": {
+			"time": 9,
+			"money": 8.07,
+			"carbon": 1.728
+		}
+	}
+
+
+
 
 
 ]

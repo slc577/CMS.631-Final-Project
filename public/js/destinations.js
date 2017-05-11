@@ -1,6 +1,6 @@
 var DESTINATIONS = [
 	{
-		"name": "Shaw's",
+		"name": "Grocery Shopping at Shaws",
 		"id": "shaws",
 		"walkTransport": {
 			"time": 11,
@@ -24,7 +24,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Cambridgeside Galleria",
+		"name": "Visit to Cambridgeside Galleria",
 		"id": "cambridgeside",
 		"walkTransport": {
 			"time": 28,
@@ -48,7 +48,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Movie at Fenway",
+		"name": "Watching a Movie at Fenway",
 		"id": "fenwaymovie",
 		"walkTransport": {
 			"time": 30,
@@ -70,5 +70,56 @@ var DESTINATIONS = [
 			"money": 11.15,
 			"carbon": 1.34
 		}
-	},	
+	},
+	{
+		"name": "Eating Lunch at Bartley's in Harvard Sqaure",
+		"id": "bartley",
+		"walkTransport": {
+			"time": 35,
+			"money": 0,
+			"carbon": 0
+		},
+		"bikeTransport": {
+			"time": 9,
+			"money": 6,
+			"carbon": 0
+		},
+		"publicTransport": {
+			"time": 15,
+			"money": 1.70,
+			"carbon": 0.72
+		},
+		"carTransport": {
+			"time": 11,
+			"money": 14.32,
+			"carbon": 1.53
+		}
+	},
+	{
+		"name": "Going to a Frat Party at Phi Sig",
+		"id": "phisig",
+		"walkTransport": {
+			"time": 18,
+			"money": 0,
+			"carbon": 0
+		},
+		"bikeTransport": {
+			"time": 6,
+			"money": 6,
+			"carbon": 0
+		},
+		"publicTransport": {
+			"time": 12,
+			"money": 1.70,
+			"carbon": 0.45
+		},
+		"carTransport": {
+			"time": 7,
+			"money": 9.45,
+			"carbon": 0.96
+		}
+	},
+
+
+
 ]

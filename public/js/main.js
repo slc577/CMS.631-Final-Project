@@ -12,7 +12,7 @@ var MyModel = function() {
 		SECOND_QUESTIONS: 5,
 		RESULTS: 6
 	};
-	me.NUM_ACTIVITIES_TO_PICK = 2;
+	me.NUM_ACTIVITIES_TO_PICK = 3;
 	me.DESTINATIONS = ko.observableArray(DESTINATIONS);
 	me.state = ko.observable(me.STATES.HOME);
 	me.pickedActivities = ko.observableArray([]);

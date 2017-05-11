@@ -6,20 +6,25 @@
   <div id="main">
     <div id="home" data-bind="if: state() == STATES.HOME">
       <h2>Welcome to Itinerarie!</h2>
+      <p>This is a short questionnaire about<br><span class="emph">transportation decisions</span>.</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.CHOOSE_ACTIVITIES)}">continue</button>
     </div>
     <div id="choose-activities" data-bind="if: state() == STATES.CHOOSE_ACTIVITIES">
-      <h2>What would you do in a weekend? (Pick <span data-bind="text: NUM_ACTIVITIES_TO_PICK"></span>)</h2>
+      <h2>Choose <span data-bind="text: NUM_ACTIVITIES_TO_PICK"></span> activities you might do this weekend!</h2>
       <div data-bind="foreach: DESTINATIONS">
           <button class="btn btn-full activity-btn" data-bind="text: name, click: $root.toggleActivity, css: {pickedActivity: $root.isPickedActivity($data)}"></button>
       </div>
 
-      <button class="btn btn-full" data-bind="enable: NUM_ACTIVITIES_TO_PICK == pickedActivities().length, click: function(){state(STATES.FIRST_QUESTIONS)}">continue</button>
+      <button class="btn btn-full" data-bind="enable: NUM_ACTIVITIES_TO_PICK == pickedActivities().length, click: function(){state(STATES.INSTRUCTIONS)}">continue</button>
+    </div>
+    <div id="home" data-bind="if: state() == STATES.INSTRUCTIONS">
+      <h2>Now that you have activities...</h2>
+      <p>We want to know how you will get to them! The following screens will let you choose between <span class="emph"> walking, biking, public transportation, and taking an Uber</span>. For each, we'll also tell you how much <span class="emph">time and money</span> we estimate each one will take.</p>
+      <button class="btn btn-full" data-bind="click: function(){state(STATES.FIRST_QUESTIONS)}">continue</button>
     </div>
     <div id="first-questions" data-bind="if: state() == STATES.FIRST_QUESTIONS && currentActivity()">
-      <h2>Choose your mode of transportation!</h2>
       <!-- ko with: currentActivity() -->
-      <h3>Destination: <span data-bind="text: name"></span></h3>
+      <h2>How are you going to get to <span data-bind="text: name" class="emph"></span>?</h2>
       <table id="first-questions-table" class="questions-table">
         <thead>
           <tr><td></td><td>$</td><td>time</td></tr>
@@ -51,7 +56,9 @@
       <button class="btn btn-full" data-bind="enable: firstResults().length > questionIndex(), click: next">continue</button>
     </div>
     <div id="transition-screen" data-bind="if: state() == STATES.TRANSITION_SCREEN">
-      <h2>blablahblah transition</h2>
+      <h2>Good work! But...</h2>
+      <p>Were you thinking of the <span class="emph">environment</span> when you were making your transportation decisions?</p>
+      <p>Let's go through your day again, but now we'll show you time, money and <span class="emph">carbon emissions</span> each one takes.</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.SECOND_QUESTIONS)}">continue</button>
     </div>
     <div id="second-questions" data-bind="if: state() == STATES.SECOND_QUESTIONS && currentActivity()">

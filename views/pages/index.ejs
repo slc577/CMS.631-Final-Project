@@ -31,22 +31,22 @@
         </thead>
         <tbody>
           <tr data-bind="with: walkTransport, click: $root.selectTransport.bind($data, 'walkTransport'), css: {pickedTransport: $root.isPickedTransport('walkTransport')}">
-            <td>walk</td>
+            <td><div class="walk-img"><img src="/images/walk.png"></div></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
           </tr>
           <tr data-bind="with: bikeTransport, click: $root.selectTransport.bind($data, 'bikeTransport'), css: {pickedTransport: $root.isPickedTransport('bikeTransport')}">
-            <td>bike</td>
+            <td><div class="bike-img"><img src="/images/bike.png"></div></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
           </tr>
           <tr data-bind="with: publicTransport, click: $root.selectTransport.bind($data, 'publicTransport'), css: {pickedTransport: $root.isPickedTransport('publicTransport')}">
-            <td>public</td>
+            <td><div class="public-img"><img src="/images/public.png"></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
           </tr>
           <tr data-bind="with: carTransport, click: $root.selectTransport.bind($data, 'carTransport'), css: {pickedTransport: $root.isPickedTransport('carTransport')}">
-            <td>car</td>
+            <td><div class="uber-img"><img src="/images/uber.ico"></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
           </tr>
@@ -71,19 +71,19 @@
         </thead>
         <tbody>
           <tr data-bind="with: walkTransport, click: $root.selectTransport.bind($data, 'walkTransport'), css: {pickedTransport: $root.isPickedTransport('walkTransport')}">
-            <td>walk</td>
+            <td><div class="walk-img"><img src="/images/walk.png"></div></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
             <td data-bind="text: carbon"></td>
           </tr>
           <tr data-bind="with: bikeTransport, click: $root.selectTransport.bind($data, 'bikeTransport'), css: {pickedTransport: $root.isPickedTransport('bikeTransport')}">
-            <td>bike</td>
+            <td><div class="bike-img"><img src="/images/bike.png"></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
             <td data-bind="text: carbon"></td>
           </tr>
           <tr data-bind="with: publicTransport, click: $root.selectTransport.bind($data, 'publicTransport'), css: {pickedTransport: $root.isPickedTransport('publicTransport')}">
-            <td>public</td>
+            <td><div class="public-img"><img src="/images/public.png"></td>
             <td data-bind="text: money"></td>
             <td data-bind="text: time"></td>
             <td data-bind="text: carbon"></td>

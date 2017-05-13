@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 var MyModel = function() {
 	var me = this;
 	me.STATES = {
@@ -19,6 +18,7 @@ var MyModel = function() {
 	me.firstResults = ko.observableArray([]);
 	me.secondResults = ko.observableArray([]);
 	me.questionIndex = ko.observable(0);
+
 
 	me.toggleActivity = function(activity) {
 		for (var i = 0; i < me.pickedActivities().length; i++) {

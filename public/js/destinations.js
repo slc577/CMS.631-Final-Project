@@ -24,7 +24,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Visiting Cambridgeside Galleria",
+		"name": "Cambridgeside Galleria",
 		"id": "cambridgeside",
 		"walkTransport": {
 			"time": 28,
@@ -48,7 +48,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Watching a Movie at Fenway",
+		"name": "A Movie at Fenway",
 		"id": "fenwaymovie",
 		"walkTransport": {
 			"time": 30,
@@ -72,7 +72,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Eating Lunch at Bartley's in Harvard Square",
+		"name": "Lunch at Bartley's in Harvard Square",
 		"id": "bartley",
 		"walkTransport": {
 			"time": 35,
@@ -96,7 +96,7 @@ var DESTINATIONS = [
 		}
 	},
 	{
-		"name": "Going to a Frat Party at Phi Sig",
+		"name": "Frat Party at Phi Sig",
 		"id": "phisig",
 		"walkTransport": {
 			"time": 18,
@@ -121,7 +121,7 @@ var DESTINATIONS = [
 	},
 
 	{
-		"name": "Visiting the Museum of Science",
+		"name": "The Museum of Science",
 		"id": "museumofscience",
 		"walkTransport": {
 			"time": 36,
@@ -146,7 +146,7 @@ var DESTINATIONS = [
 	},
 
 	{
-		"name": "Visiting the Boston Aquarium",
+		"name": "Boston Aquarium",
 		"id": "aquarium",
 		"walkTransport": {
 			"time": 52,
@@ -171,7 +171,7 @@ var DESTINATIONS = [
 	},
 
 	{
-		"name": "Visiting the Museum of Fine Arts",
+		"name": "The Museum of Fine Arts",
 		"id": "finearts",
 		"walkTransport": {
 			"time": 36,

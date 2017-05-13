@@ -101,25 +101,71 @@ var MyModel = function() {
 		}
 	}
 
-	me.totalCarbonFirst = ko.pureComputed({
+	me.totalFirst = ko.pureComputed({
 		read: function() {
-			var sum = 0;
+			var carbon = 0;
+			var time = 0;
+			var money = 0;
 			me.firstResults().forEach(function(r) {
-				sum += parseFloat(r.details.carbon);
+				carbon += parseFloat(r.details.carbon);
+				time += parseFloat(r.details.time);
+				money += parseFloat(r.details.money);
 			});
-			return sum;
+			return {carbon: carbon.toFixed(2), time: time.toFixed(2), money: money.toFixed(2)};
 		}
 	});
 
-	me.totalCarbonSecond = ko.pureComputed({
+	me.totalSecond = ko.pureComputed({
 		read: function() {
-			var sum = 0;
+			var carbon = 0;
+			var time = 0;
+			var money = 0;
 			me.secondResults().forEach(function(r) {
-				sum += parseFloat(r.details.carbon);
+				carbon += parseFloat(r.details.carbon);
+				time += parseInt(r.details.time);
+				money += parseFloat(r.details.money);
 			});
-			return sum;
+			return {carbon: carbon.toFixed(2), time: time.toFixed(2), money: money.toFixed(2)};
 		}
 	});
+
+	me.showDiff = ko.pureComputed({
+		read: function() {
+			if (me.totalSecond().carbon < me.totalFirst().carbon) {
+				return 1;
+			} else if (me.totalSecond().carbon > me.totalFirst().carbon) {
+				return -1;
+			} else {
+				return 0;
+			}
+		}
+	});
+
+	me.carbon1 = ko.pureComputed({
+		read: function() {
+			return Math.abs(me.totalFirst().carbon - me.totalSecond().carbon).toFixed(2);
+		}		
+	})
+
+	me.carbon1000 = ko.pureComputed({
+		read: function() {
+			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)*1000).toFixed(2);
+		}
+	});
+
+	me.trees1000 = ko.pureComputed({
+		read: function() {
+			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)/0.13*1000).toFixed(2);
+		}
+	});
+
+	me.reset = function() {
+		me.pickedActivities([]);
+		me.firstResults([]);
+		me.secondResults([]);
+		me.questionIndex(0);
+		me.state(me.STATES.HOME);
+	}
 } // end of ko model
 
 ko.applyBindings(new MyModel());

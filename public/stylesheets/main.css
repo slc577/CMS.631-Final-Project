@@ -123,3 +123,7 @@ h2 .emph {
 	background-color: #555B6E;
 	color: white;
 }
+
+#results-screen {
+	text-align: center;
+}

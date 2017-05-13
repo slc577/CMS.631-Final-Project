@@ -65,7 +65,7 @@
       <h2>Choose your mode of transportation!</h2>
       <!-- ko with: currentActivity() -->
       <h3>Destination: <span data-bind="text: name"></span></h3>
-      <table id="first-questions-table" class="questions-table">
+      <table id="second-questions-table" class="questions-table">
         <thead>
           <tr><td></td><td>$</td><td>time</td><td>carbon</td></tr>
         </thead>
@@ -97,23 +97,47 @@
         </tbody>
       </table>
       <!-- /ko -->
-      <button class="btn btn-full" data-bind="enable: firstResults().length > questionIndex(), click: next">continue</button>
+      <button class="btn btn-full" data-bind="enable: secondResults().length > questionIndex(), click: next">continue</button>
     </div>
     <div id="results-screen" data-bind="if: state() == STATES.RESULTS">
-      <h2>blablahblah results</h2>
-      <h3>First Time:</h3>
-      <div data-bind="foreach: firstResults">
-        <p>Which: <span data-bind="text: name"></span> Carbon: <span data-bind="text: $data.details.carbon"></span></p>
+      <h2>Results</h2>
+      <div data-bind="if: showDiff() == 0">
+        <p>Your environmental impact didn't change between rounds, and that's ok!</p>
+        <p>Keep in mind that</p>
+        <h3>one fully mature tree</h3>
+        <p>can only absorb</p>
+        <h3>0.13 lbs of CO2 daily.</h3>
+        <p>Our transportation decisions have an impact on the environment!</p>
       </div>
-      <div>Total Carbon: <span data-bind="text: totalCarbonFirst()"></span></div>
 
-      <h3>Second Time:</h3>
-      <div data-bind="foreach: secondResults">
-        <p>Which: <span data-bind="text: name"></span> Carbon: <span data-bind="text: $data.details.carbon"></span></p>
+      <div data-bind="if: showDiff() == -1">
+        <p>During the second round, you consumed</p>
+        <h3><span data-bind="text: carbon1()"></span> more lbs of CO2</h3>
+        <p>If 1000 other MIT students did the same, we would spend</p>
+        <h3><span data-bind="text: carbon1000()"></span> more lbs of CO2 in just one weekend.</h3>
+        <p>That's the equivalent of</p>
+        <h3><span data-bind="text: trees1000()"></span> trees' daily CO2 intake!</h3>     
       </div>
-      <div>Total Carbon: <span data-bind="text: totalCarbonSecond()"></span></div>
 
-      <button class="btn btn-full" data-bind="click: function(){state(STATES.HOME)}">done</button>
+      <div data-bind="if: showDiff() == 1">
+        <div data-bind="if: totalSecond().time > totalFirst().time">
+          <p>By spending an extra</p>
+          <h3><span data-bind="text: totalSecond().time - totalFirst().time"></span> minutes</h3>
+        </div>
+        <div data-bind="if: totalSecond().time < totalFirst().time">
+          <p>You saved <span data-bind="text: totalFirst().time-totalSecond.().time"></span>, AND</p> 
+        </div>
+        <p>You saved</p>
+        <h3><span data-bind="text: carbon1()"></span> lbs of CO2</h3>
+        <p>If 1000 other MIT students did the same, we would save</p>
+        <h3><span data-bind="text: carbon1000()"></span> lbs of CO2 in just one weekend.</h3>
+        <p>That's the equivalent of</p>
+        <h3><span data-bind="text: trees1000()"></span> trees' daily CO2 intake!</h3>        
+      </div>
+
+      <h3 data-bind="if: showDiff() != 0">Remember the environment when making transportation decisions!</h3>
+
+      <button class="btn btn-full" data-bind="click: reset">done</button>
     </div>
   </div>
 </body>

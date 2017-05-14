@@ -62,9 +62,8 @@
       <button class="btn btn-full" data-bind="click: function(){state(STATES.SECOND_QUESTIONS)}">continue</button>
     </div>
     <div id="second-questions" data-bind="if: state() == STATES.SECOND_QUESTIONS && currentActivity()">
-      <h2>Choose your mode of transportation!</h2>
       <!-- ko with: currentActivity() -->
-      <h3>Destination: <span data-bind="text: name"></span></h3>
+      <h2>How are you going to get to <span data-bind="text: name" class="emph"></span>?</h2>
       <table id="second-questions-table" class="questions-table">
         <thead>
           <tr><td></td><td>$</td><td>time</td><td>carbon</td></tr>
@@ -125,7 +124,7 @@
           <h3><span data-bind="text: totalSecond().time - totalFirst().time"></span> minutes</h3>
         </div>
         <div data-bind="if: totalSecond().time < totalFirst().time">
-          <p>You saved <span data-bind="text: totalFirst().time-totalSecond.().time"></span>, AND</p> 
+          <p>You saved <span data-bind="text: totalFirst().time-totalSecond().time"></span>, AND</p> 
         </div>
         <p>You saved</p>
         <h3><span data-bind="text: carbon1()"></span> lbs of CO2</h3>

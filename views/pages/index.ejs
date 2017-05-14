@@ -17,7 +17,7 @@
 
       <button class="btn btn-full" data-bind="enable: NUM_ACTIVITIES_TO_PICK == pickedActivities().length, click: function(){state(STATES.INSTRUCTIONS)}">continue</button>
     </div>
-    <div id="home" data-bind="if: state() == STATES.INSTRUCTIONS">
+    <div class="transition-screen" data-bind="if: state() == STATES.INSTRUCTIONS">
       <h2>Now that you have activities...</h2>
       <p>We want to know how you will get to them! The following screens will let you choose between <span class="emph"> walking, biking, public transportation, and taking an Uber</span>. For each, we'll also tell you how much <span class="emph">time and money</span> we estimate each one will take.</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.FIRST_QUESTIONS)}">continue</button>
@@ -55,7 +55,7 @@
       <!-- /ko -->
       <button class="btn btn-full" data-bind="enable: firstResults().length > questionIndex(), click: next">continue</button>
     </div>
-    <div id="transition-screen" data-bind="if: state() == STATES.TRANSITION_SCREEN">
+    <div class="transition-screen" data-bind="if: state() == STATES.TRANSITION_SCREEN">
       <h2>Good work! But...</h2>
       <p>Were you thinking of the <span class="emph">environment</span> when you were making your transportation decisions?</p>
       <p>Let's go through your day again, but now we'll show you time, money and <span class="emph">carbon emissions</span> each one takes.</p>
@@ -98,8 +98,7 @@
       <!-- /ko -->
       <button class="btn btn-full" data-bind="enable: secondResults().length > questionIndex(), click: next">continue</button>
     </div>
-    <div id="results-screen" data-bind="if: state() == STATES.RESULTS">
-      <h2>Results</h2>
+    <div class="results-screen" data-bind="if: state() == STATES.RESULTS">
       <div data-bind="if: showDiff() == 0">
         <p>Your environmental impact didn't change between rounds, and that's ok!</p>
         <p>Keep in mind that</p>
@@ -107,15 +106,13 @@
         <p>can only absorb</p>
         <h3>0.13 lbs of CO2 daily.</h3>
         <p>Our transportation decisions have an impact on the environment!</p>
+        <button class="btn btn-full" data-bind="click: reset">done</button>
       </div>
 
       <div data-bind="if: showDiff() == -1">
         <p>During the second round, you consumed</p>
         <h3><span data-bind="text: carbon1()"></span> more lbs of CO2</h3>
-        <p>If 1000 other MIT students did the same, we would spend</p>
-        <h3><span data-bind="text: carbon1000()"></span> more lbs of CO2 in just one weekend.</h3>
-        <p>That's the equivalent of</p>
-        <h3><span data-bind="text: trees1000()"></span> trees' daily CO2 intake!</h3>     
+        <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS2)}">How much is <span data-bind="text: carbon1()"></span> lbs of CO2?</button>
       </div>
 
       <div data-bind="if: showDiff() == 1">
@@ -127,17 +124,26 @@
           <p>You saved <span data-bind="text: totalFirst().time-totalSecond().time"></span>, AND</p> 
         </div>
         <p>You saved</p>
-        <h3><span data-bind="text: carbon1()"></span> lbs of CO2</h3>
-        <p>If 1000 other MIT students did the same, we would save</p>
-        <h3><span data-bind="text: carbon1000()"></span> lbs of CO2 in just one weekend.</h3>
-        <p>That's the equivalent of</p>
-        <h3><span data-bind="text: trees1000()"></span> trees' daily CO2 intake!</h3>        
+        <h3><span data-bind="text: carbon1()"></span> lbs of CO2</h3>        
+        <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS2)}">How much is <span data-bind="text: carbon1()"></span> lbs of CO2?</button>
       </div>
-
-      <h3 data-bind="if: showDiff() != 0">Remember the environment when making transportation decisions!</h3>
-
-      <button class="btn btn-full" data-bind="click: reset">done</button>
     </div>
+
+    <div class="results-screen" data-bind="if: state() == STATES.RESULTS2">
+      <p>One mature tree can only absorb</p>
+      <h3>0.13 lbs of CO2 a day</h3>
+      <p><span data-bind="text: carbon1()" class="emph"></span> lbs of CO2 is the equivalent of</p>
+      <h3><span data-bind="text: trees1()"></span> trees' daily CO2 intake!</h3>  
+      <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS3)}">Why does this matter?</button>
+    </div> 
+
+    <div class="results-screen" data-bind="if: state() == STATES.RESULTS3">
+      <p>CO2 is one of the leading contributors to air pollution and climate change. Collectively, our decisions can make a difference.</p>
+      <p>If 1000 other MIT students changed their decisions like you did, we would <span data-bind="if: showDiff() == 1">save</span><span data-bind="if: showDiff() == -1">spend an extra</span></p>
+      <h3><span data-bind="text: carbon1000()"></span> lbs of CO2 in just one weekend.</h3>
+      <p>Remember the environment when making transportation decisions!</p>
+      <button class="btn btn-full" data-bind="click: reset">done</button>
+    </div> 
   </div>
 </body>
 </html>

@@ -9,7 +9,9 @@ var MyModel = function() {
 		FIRST_QUESTIONS: 3,
 		TRANSITION_SCREEN: 4,
 		SECOND_QUESTIONS: 5,
-		RESULTS: 6
+		RESULTS: 6, 
+		RESULTS2: 7,
+		RESULTS3: 8
 	};
 	me.NUM_ACTIVITIES_TO_PICK = 3;
 	me.DESTINATIONS = ko.observableArray(DESTINATIONS);
@@ -149,13 +151,13 @@ var MyModel = function() {
 
 	me.carbon1000 = ko.pureComputed({
 		read: function() {
-			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)*1000).toFixed(2);
+			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)*1000).toFixed(0);
 		}
 	});
 
-	me.trees1000 = ko.pureComputed({
+	me.trees1 = ko.pureComputed({
 		read: function() {
-			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)/0.13*1000).toFixed(2);
+			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)/0.13).toFixed(2);
 		}
 	});
 

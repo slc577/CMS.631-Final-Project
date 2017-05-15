@@ -19,7 +19,14 @@
     </div>
     <div class="transition-screen" data-bind="if: state() == STATES.INSTRUCTIONS">
       <h2>Now that you have activities...</h2>
-      <p>We want to know how you will get to them! The following screens will let you choose between <span class="emph"> walking, biking, public transportation, and taking an Uber</span>. For each, we'll also tell you how much <span class="emph">time and money</span> we estimate each one will take.</p>
+      <p>We want to know how you will get to them! For each you have a choice between</p>
+      <tr>
+        <td><div class="walk-instruct"><img src="/images/walk.png"><span class="emph">Walking</div></span></td>
+        <td><div class="bike-instruct"><img src="/images/bike.png"><span class="emph">Renting a Hubway</div></span></td>
+        <td><div class="public-instruct"><img src="/images/public.png"><span class="emph">Taking Public Transportation</div></spam></td>
+        <td><div class="uber-instruct"><img src="/images/uber.ico"><span class="emph">Calling an Uber</span></div></td>
+      </tr>
+      <p>We will also show you the estimated <span class="emph">time and money</span> required to use each one.</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.FIRST_QUESTIONS)}">continue</button>
     </div>
     <div id="first-questions" data-bind="if: state() == STATES.FIRST_QUESTIONS && currentActivity()">
@@ -27,7 +34,7 @@
       <h2>How are you going to get to <span data-bind="text: name" class="emph"></span>?</h2>
       <table id="first-questions-table" class="questions-table">
         <thead>
-          <tr><td></td><td>$</td><td>time</td></tr>
+          <tr><td></td><td>Cost ($)</td><td>Time (Min)</td></tr>
         </thead>
         <tbody>
           <tr data-bind="with: walkTransport, click: $root.selectTransport.bind($data, 'walkTransport'), css: {pickedTransport: $root.isPickedTransport('walkTransport')}">
@@ -55,10 +62,11 @@
       <!-- /ko -->
       <button class="btn btn-full" data-bind="enable: firstResults().length > questionIndex(), click: next">continue</button>
     </div>
-    <div class="transition-screen" data-bind="if: state() == STATES.TRANSITION_SCREEN">
+    <div class="environment-switch-screen" data-bind="if: state() == STATES.TRANSITION_SCREEN">
       <h2>Good work! But...</h2>
       <p>Were you thinking of the <span class="emph">environment</span> when you were making your transportation decisions?</p>
-      <p>Let's go through your day again, but now we'll show you time, money and <span class="emph">carbon emissions</span> each one takes.</p>
+      <p>Let's go through your day again, but now you'll see the <span class="emph">carbon</span> emitted from each choice too.</p>
+      <p>Try reducing your <span class="emph">carbon</span> footprint!</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.SECOND_QUESTIONS)}">continue</button>
     </div>
     <div id="second-questions" data-bind="if: state() == STATES.SECOND_QUESTIONS && currentActivity()">
@@ -66,7 +74,7 @@
       <h2>How are you going to get to <span data-bind="text: name" class="emph"></span>?</h2>
       <table id="second-questions-table" class="questions-table">
         <thead>
-          <tr><td></td><td>$</td><td>time</td><td>carbon</td></tr>
+          <tr><td></td><td>Cost</td><td>Time</td><td>Carbon (lbs)</td></tr>
         </thead>
         <tbody>
           <tr data-bind="with: walkTransport, click: $root.selectTransport.bind($data, 'walkTransport'), css: {pickedTransport: $root.isPickedTransport('walkTransport')}">
@@ -121,7 +129,7 @@
           <h3><span data-bind="text: totalSecond().time - totalFirst().time"></span> minutes</h3>
         </div>
         <div data-bind="if: totalSecond().time < totalFirst().time">
-          <p>You saved <span data-bind="text: totalFirst().time-totalSecond().time"></span>, AND</p> 
+          <p>You saved <span data-bind="text: totalFirst().time-totalSecond().time"></span> minutes, AND</p> 
         </div>
         <p>You saved</p>
         <h3><span data-bind="text: carbon1()"></span> lbs of CO2</h3>        

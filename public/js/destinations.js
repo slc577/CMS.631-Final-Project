@@ -4,12 +4,12 @@ var DESTINATIONS = [
 		"id": "shaws",
 		"walkTransport": {
 			"time": 11,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 5,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
@@ -28,17 +28,17 @@ var DESTINATIONS = [
 		"id": "cambridgeside",
 		"walkTransport": {
 			"time": 28,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 11,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
 			"time": 20,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0.81
 		},
 		"carTransport": {
@@ -52,12 +52,12 @@ var DESTINATIONS = [
 		"id": "fenwaymovie",
 		"walkTransport": {
 			"time": 30,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 10,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
@@ -76,12 +76,12 @@ var DESTINATIONS = [
 		"id": "bartley",
 		"walkTransport": {
 			"time": 35,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 9,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
@@ -100,12 +100,12 @@ var DESTINATIONS = [
 		"id": "phisig",
 		"walkTransport": {
 			"time": 18,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 6,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
@@ -125,17 +125,17 @@ var DESTINATIONS = [
 		"id": "museumofscience",
 		"walkTransport": {
 			"time": 36,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 12,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
 			"time": 25,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0.855
 		},
 		"carTransport": {
@@ -150,12 +150,12 @@ var DESTINATIONS = [
 		"id": "aquarium",
 		"walkTransport": {
 			"time": 52,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
 			"time": 20,
-			"money": 6,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
@@ -175,21 +175,21 @@ var DESTINATIONS = [
 		"id": "finearts",
 		"walkTransport": {
 			"time": 36,
-			"money": 0,
+			"money": 0.00,
 			"carbon": 0
 		},
 		"bikeTransport": {
-			"time": 12,
-			"money": 6,
+			"time": 13,
+			"money": 6.00,
 			"carbon": 0
 		},
 		"publicTransport": {
-			"time": 25,
+			"time": 22,
 			"money": 1.70,
 			"carbon": 0.81
 		},
 		"carTransport": {
-			"time": 9,
+			"time": 12,
 			"money": 8.07,
 			"carbon": 1.728
 		}

@@ -120,7 +120,7 @@ var MyModel = function() {
 				time += parseInt(r.details.time);
 				money += parseFloat(r.details.money);
 			});
-			
+
 			return {carbon: carbon.toFixed(2), time: time, money: money.toFixed(2)};
 		}
 	});
@@ -153,19 +153,22 @@ var MyModel = function() {
 
 	me.carbon1 = ko.pureComputed({
 		read: function() {
+			if (me.showDiff() == 0) {
+				return me.totalFirst().carbon;
+			}
 			return Math.abs(me.totalFirst().carbon - me.totalSecond().carbon).toFixed(2);
 		}		
 	})
 
 	me.carbon1000 = ko.pureComputed({
 		read: function() {
-			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)*1000).toFixed(0);
+			return (me.carbon1()*1000).toFixed(0);
 		}
 	});
 
 	me.trees1 = ko.pureComputed({
 		read: function() {
-			return (Math.abs(me.totalFirst().carbon - me.totalSecond().carbon)/0.13).toFixed(2);
+			return (me.carbon1()/0.13).toFixed(2);
 		}
 	});
 

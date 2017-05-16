@@ -68,7 +68,7 @@
       <h2>Good work! But...</h2>
       <p>Were you thinking of the <span class="emph">environment</span> when you were making your transportation decisions?</p>
       <p>Let's go through your day again, but now you'll see the <span class="emph">carbon</span> emitted from each choice too.</p>
-      <p>Try reducing your <span class="emph">carbon</span> footprint!</p>
+      <h3>Try reducing your <span class="emph">carbon</span> footprint!</h3>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.SECOND_QUESTIONS)}">continue</button>
     </div>
     <div id="second-questions" data-bind="if: state() == STATES.SECOND_QUESTIONS && currentActivity()">
@@ -113,12 +113,9 @@
     <div class="results-screen" data-bind="if: state() == STATES.RESULTS">
       <div data-bind="if: showDiff() == 0">
         <p>Your environmental impact didn't change between rounds, and that's ok!</p>
-        <p>Keep in mind that</p>
-        <h3>one fully mature tree</h3>
-        <p>can only absorb</p>
-        <h3>0.13 lbs of CO2 daily.</h3>
-        <p>Our transportation decisions have an impact on the environment!</p>
-        <button class="btn btn-full" data-bind="click: reset">done</button>
+        <p>Keep in mind that your choices released</p>
+        <h3><span data-bind="text: carbon1()"></span> lbs of CO2</h3>
+        <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS2)}">How much is <span data-bind="text: carbon1()"></span> lbs of CO2?</button>
       </div>
 
       <div data-bind="if: showDiff() == -1">

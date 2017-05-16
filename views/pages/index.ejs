@@ -142,9 +142,14 @@
     </div>
 
     <div class="results-screen" data-bind="if: state() == STATES.RESULTS2">
-      <p>One mature tree can only absorb</p>
+      <p>One mature tree</p>
+      <img src="/images/tree.png" class="big-tree">
+      <p>can only absorb</p>
       <h3>0.13 lbs of CO2 a day</h3>
       <p><span data-bind="text: carbon1()" class="emph"></span> lbs of CO2 is the equivalent of</p>
+      <div data-bind="foreach: new Array(Math.floor(trees1()))">
+        <img src="/images/tree.png" class="little-tree">
+      </div>
       <h3><span data-bind="text: trees1()"></span> trees' daily CO2 intake!</h3>  
       <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS3)}">Why does this matter?</button>
     </div> 
@@ -158,7 +163,7 @@
 
     <div class="results-screen" data-bind="if: state() == STATES.RESULTS4">
       <h3>Some tips for making greener choices...</h3>
-      <p>Hubway locations are common. Theres even a renting location outside the Student Center. Fees are relatively low and biking in Cambridge can be faster and greener for the environment</p>
+      <p>Hubway locations are common. There's even a renting location outside the Student Center. Fees are relatively low and biking in Cambridge can be faster and greener for the environment</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS5)}">continue</button>
     </div> 
 

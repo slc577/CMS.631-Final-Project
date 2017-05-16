@@ -152,7 +152,6 @@ h2 .emph {
 
 .bike-instruct img {
 	height: 24px;
-	margin-left: 17px;
 	margin-top: 4px;
 	margin-bottom: : 4px;
 	vertical-align: middle;
@@ -167,7 +166,6 @@ h2 .emph {
 
 .public-instruct img {
 	height: 30px;
-	margin-left: 23px;
 	vertical-align: middle;
 	text-align: left;
 	padding: 8px;
@@ -179,7 +177,6 @@ h2 .emph {
 }
 
 .walk-instruct img {
-	margin-left: 25px;
 	height: 30px;
 	vertical-align: middle;
 	text-align: left;
@@ -192,7 +189,6 @@ h2 .emph {
 }
 
 .uber-instruct img {
-	margin-left: 17px;
 	height: 35px;
 	vertical-align: middle;
 	text-align: left;

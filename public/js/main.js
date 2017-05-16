@@ -11,7 +11,8 @@ var MyModel = function() {
 		SECOND_QUESTIONS: 5,
 		RESULTS: 6, 
 		RESULTS2: 7,
-		RESULTS3: 8
+		RESULTS3: 8,
+		RESULTS4: 9
 	};
 	me.NUM_ACTIVITIES_TO_PICK = 3;
 	me.DESTINATIONS = ko.observableArray(DESTINATIONS);
@@ -124,7 +125,7 @@ var MyModel = function() {
 			var money = 0;
 			me.secondResults().forEach(function(r) {
 				carbon += parseFloat(r.details.carbon);
-				time += parseInt(r.details.time);
+				time += parseFloat(r.details.time);
 				money += parseFloat(r.details.money);
 			});
 			return {carbon: carbon.toFixed(2), time: time.toFixed(2), money: money.toFixed(2)};

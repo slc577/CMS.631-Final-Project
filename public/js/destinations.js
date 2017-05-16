@@ -19,7 +19,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 4,
-			"money": 11.25,
+			"money": 9.45,
 			"carbon": 0.58
 		}
 	},
@@ -43,7 +43,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 8,
-			"money": 12.38,
+			"money": 12.15,
 			"carbon": 1.73
 		}
 	},
@@ -67,7 +67,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 10,
-			"money": 11.15,
+			"money": 12.95,
 			"carbon": 1.34
 		}
 	},
@@ -91,7 +91,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 11,
-			"money": 14.32,
+			"money": 14.16,
 			"carbon": 1.53
 		}
 	},
@@ -115,7 +115,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 7,
-			"money": 9.45,
+			"money": 10.43,
 			"carbon": 0.96
 		}
 	},
@@ -140,7 +140,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 9,
-			"money": 7.99,
+			"money": 16.67,
 			"carbon": 1.82
 		}
 	},
@@ -165,7 +165,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 18,
-			"money": 10.31,
+			"money": 21.54,
 			"carbon": 2.50
 		}
 	},
@@ -190,7 +190,7 @@ var DESTINATIONS = [
 		},
 		"carTransport": {
 			"time": 12,
-			"money": 8.07,
+			"money": 13.59,
 			"carbon": 1.73
 		}
 	}

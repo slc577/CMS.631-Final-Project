@@ -114,10 +114,11 @@ var MyModel = function() {
 			var money = 0;
 			me.firstResults().forEach(function(r) {
 				carbon += parseFloat(r.details.carbon);
-				time += parseFloat(r.details.time);
+				time += parseInt(r.details.time);
 				money += parseFloat(r.details.money);
 			});
-			return {carbon: carbon.toFixed(2), time: time.toFixed(2), money: money.toFixed(2)};
+			
+			return {carbon: carbon.toFixed(2), time: time, money: money.toFixed(2)};
 		}
 	});
 
@@ -128,10 +129,10 @@ var MyModel = function() {
 			var money = 0;
 			me.secondResults().forEach(function(r) {
 				carbon += parseFloat(r.details.carbon);
-				time += parseFloat(r.details.time);
+				time += parseInt(r.details.time);
 				money += parseFloat(r.details.money);
 			});
-			return {carbon: carbon.toFixed(2), time: time.toFixed(2), money: money.toFixed(2)};
+			return {carbon: carbon.toFixed(2), time: time, money: money.toFixed(2)};
 		}
 	});
 

@@ -32,6 +32,7 @@
     <div id="first-questions" data-bind="if: state() == STATES.FIRST_QUESTIONS && currentActivity()">
       <!-- ko with: currentActivity() -->
       <h2>How are you going to get to <span data-bind="text: name" class="emph"></span>?</h2>
+      <center>
       <table id="first-questions-table" class="questions-table">
         <thead>
           <tr><td></td><td>Cost ($)</td><td>Time (Min)</td></tr>
@@ -59,6 +60,7 @@
           </tr>
         </tbody>
       </table>
+    </center>
       <!-- /ko -->
       <button class="btn btn-full" data-bind="enable: firstResults().length > questionIndex(), click: next">continue</button>
     </div>
@@ -72,6 +74,7 @@
     <div id="second-questions" data-bind="if: state() == STATES.SECOND_QUESTIONS && currentActivity()">
       <!-- ko with: currentActivity() -->
       <h2>How are you going to get to <span data-bind="text: name" class="emph"></span>?</h2>
+      <center>
       <table id="second-questions-table" class="questions-table">
         <thead>
           <tr><td></td><td>Cost</td><td>Time</td><td>Carbon (lbs)</td></tr>
@@ -103,6 +106,7 @@
           </tr>
         </tbody>
       </table>
+    </center>
       <!-- /ko -->
       <button class="btn btn-full" data-bind="enable: secondResults().length > questionIndex(), click: next">continue</button>
     </div>

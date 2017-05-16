@@ -116,9 +116,9 @@ h2 .emph {
 }
 
 .questions-table tr td {
-	width: 120px;
+	width: 30%;
 	padding: 10px;
-	font-size: 120%
+	font-size: 80%
 }
 
 .questions-table tr.pickedTransport {

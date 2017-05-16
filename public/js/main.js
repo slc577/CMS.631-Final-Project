@@ -24,6 +24,9 @@ var MyModel = function() {
 	me.firstResults = ko.observableArray([]);
 	me.secondResults = ko.observableArray([]);
 	me.questionIndex = ko.observable(0);
+	me.showBikeSuggest = ko.observable(false);
+	me.showPublicSuggest = ko.observable(false);
+	me.showCarSuggest = ko.observable(false);
 
 
 	me.toggleActivity = function(activity) {

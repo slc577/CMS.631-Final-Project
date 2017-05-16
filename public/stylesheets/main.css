@@ -55,11 +55,11 @@ h2 .emph {
 	margin-bottom: 10px;
 }
 
-.btn:disabled {
+.btn:disabled, .btn-green:disabled {
 	background-color: #aaa;
 }
 
-.btn:hover:disabled {
+.btn:hover:disabled, .btn-green:hover:disabled {
 	background-color: #aaa;
 }
 
@@ -71,6 +71,14 @@ h2 .emph {
 	color: white;
 	background-color: #e08bae;
 	cursor: pointer;
+}
+
+.btn-green {
+	background-color: #7AE582;
+}
+
+.btn-green:hover {
+	background-color: #9aefa1;
 }
 
 #home {
@@ -201,4 +209,12 @@ h2 .emph {
 
 .little-tree {
 	width: 30px;
+}
+
+.green-suggestion button img {
+	height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }

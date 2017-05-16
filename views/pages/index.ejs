@@ -163,11 +163,29 @@
 
     <div class="results-screen" data-bind="if: state() == STATES.RESULTS4">
       <h3>Some tips for making greener choices...</h3>
-      <p>Hubway locations are common. There's even a renting location outside the Student Center. Fees are relatively low and biking in Cambridge can be faster and greener for the environment</p>
-      <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS5)}">continue</button>
+      <p>Click on a suggestion to find out more!</p>
+      <div class="green-suggestion">
+        <button class="btn btn-full btn-green" data-bind="click: function(){showBikeSuggest(!showBikeSuggest())}"><img src="/images/bike.png">Take a Hubway</button>
+        <div data-bind="visible: showBikeSuggest()">
+          <p>Hubway locations are common. There's even a renting location outside the Student Center. Fees are relatively low and biking in Cambridge can be faster and greener for the environment</p>
+        </div>
+      </div>
+      <div class="green-suggestion">
+        <button class="btn btn-full btn-green" data-bind="click: function(){showPublicSuggest(!showPublicSuggest())}"><img src="/images/public.png">Take Public Transportation</button>
+        <div data-bind="visible: showPublicSuggest()">
+          <p>Public transportation offers a carbon emission per passenger that is often half that of driving a personal vehicle. Opting for the T instead of calling an Uber can help reduce your contributed emissions</p>
+        </div>
+      </div>
+      <div class="green-suggestion">
+        <button class="btn btn-full btn-green" data-bind="click: function(){showCarSuggest(!showCarSuggest())}"><img src="/images/uber.ico">Carpool</button>
+        <div data-bind="visible: showCarSuggest()">
+          <p>Since personal vehicles generate a large amount of carbon emission, using Uber pool and carpooling in general lead to a much lower collective carbon release.</p>
+        </div>
+      </div>
+      <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS7)}">continue</button>
     </div> 
 
-    <div class="results-screen" data-bind="if: state() == STATES.RESULTS5">
+    <!-- <div class="results-screen" data-bind="if: state() == STATES.RESULTS5">
       <h3>Some tips for making greener choices...</h3>
       <p>Public transportation offers a carbon emission per passenger that is often half that of driving a personal vehicle. Opting for the T instead of calling an Uber can help reduce your contributed emissions</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS6)}">continue</button>
@@ -177,7 +195,7 @@
       <h3>Some tips for making greener choices...</h3>
       <p>Since personal vehicles generate a large amount of carbon emission, using Uber pool and carpooling in general lead to a much lower collective carbon release.</p>
       <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS7)}">continue</button>
-    </div> 
+    </div>  -->
 
     <div class="results-screen" data-bind="if: state() == STATES.RESULTS7">
       <h3>Remember the environment when making transportation decisions!</h3>

@@ -106,6 +106,20 @@ var MyModel = function() {
 			if (me.questionIndex() >= me.NUM_ACTIVITIES_TO_PICK) {
 				me.questionIndex(0);
 				me.state(me.STATES.RESULTS);
+				me.firstResults().forEach(function(r) {
+					ga("send", {
+						hitType: "event", 
+						eventCategory: "first-result",
+						eventAction: r.name,
+					})
+				});
+				me.secondResults().forEach(function(r) {
+					ga("send", {
+						hitType: "event", 
+						eventCategory: "second-result",
+						eventAction: r.name,
+					})
+				});
 			}
 		}
 	}

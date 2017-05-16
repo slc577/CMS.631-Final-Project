@@ -159,9 +159,23 @@
     <div class="results-screen" data-bind="if: state() == STATES.RESULTS4">
       <h3>Some tips for making greener choices...</h3>
       <p>Hubway locations are common. Theres even a renting location outside the Student Center. Fees are relatively low and biking in Cambridge can be faster and greener for the environment</p>
+      <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS5)}">continue</button>
+    </div> 
+
+    <div class="results-screen" data-bind="if: state() == STATES.RESULTS5">
+      <h3>Some tips for making greener choices...</h3>
       <p>Public transportation offers a carbon emission per passenger that is often half that of driving a personal vehicle. Opting for the T instead of calling an Uber can help reduce your contributed emissions</p>
+      <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS6)}">continue</button>
+    </div> 
+
+    <div class="results-screen" data-bind="if: state() == STATES.RESULTS6">
+      <h3>Some tips for making greener choices...</h3>
       <p>Since personal vehicles generate a large amount of carbon emission, using Uber pool and carpooling in general lead to a much lower collective carbon release.</p>
-      <p><span class="emph">Remember the environment when making transportation decisions!</span></p>
+      <button class="btn btn-full" data-bind="click: function(){state(STATES.RESULTS7)}">continue</button>
+    </div> 
+
+    <div class="results-screen" data-bind="if: state() == STATES.RESULTS7">
+      <h1>Remember the environment when making transportation decisions!</h1>
       <button class="btn btn-full" data-bind="click: reset">done</button>
     </div> 
   </div>

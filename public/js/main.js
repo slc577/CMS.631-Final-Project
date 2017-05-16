@@ -12,7 +12,10 @@ var MyModel = function() {
 		RESULTS: 6, 
 		RESULTS2: 7,
 		RESULTS3: 8,
-		RESULTS4: 9
+		RESULTS4: 9,
+		RESULTS5: 10,
+		RESULTS6: 11,
+		RESULTS7: 12
 	};
 	me.NUM_ACTIVITIES_TO_PICK = 3;
 	me.DESTINATIONS = ko.observableArray(DESTINATIONS);

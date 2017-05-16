@@ -20,7 +20,7 @@ var DESTINATIONS = [
 		"carTransport": {
 			"time": 4,
 			"money": 11.25,
-			"carbon": 0.576
+			"carbon": 0.58
 		}
 	},
 	{
@@ -136,12 +136,12 @@ var DESTINATIONS = [
 		"publicTransport": {
 			"time": 25,
 			"money": 0.00,
-			"carbon": 0.855
+			"carbon": 0.86
 		},
 		"carTransport": {
 			"time": 9,
 			"money": 7.99,
-			"carbon": 1.824
+			"carbon": 1.82
 		}
 	},
 
@@ -166,7 +166,7 @@ var DESTINATIONS = [
 		"carTransport": {
 			"time": 18,
 			"money": 10.31,
-			"carbon": 2.496
+			"carbon": 2.50
 		}
 	},
 
@@ -191,7 +191,7 @@ var DESTINATIONS = [
 		"carTransport": {
 			"time": 12,
 			"money": 8.07,
-			"carbon": 1.728
+			"carbon": 1.73
 		}
 	}
 
